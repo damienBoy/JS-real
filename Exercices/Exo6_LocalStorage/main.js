@@ -69,8 +69,13 @@ signIn.addEventListener("submit" , function(event) {
     const mdp = document.getElementById("mdp2").value;
     const mdpass = localStorage.getItem("mdp");
 
-    if (mdp != mdpass)
+    if (mdp != mdpass) {
         alert("erreur mdp");
+    } else {
+        const h2 = document.querySelector(".connected");
+        h2.style.display = "block";
+    }
+        
 })
 
 
